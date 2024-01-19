@@ -1,5 +1,4 @@
 
-import Image from 'next/image'
 import Banner from './banner/Banner';
 
 
