@@ -1,6 +1,6 @@
 
 import Banner from './banner/Banner';
-import ServiceCount from '@/components/ui/ServiceCount/ServiceCount';
+import ServiceCount from '@/app/components/ui/ServiceCount/ServiceCount';
 
 const Home = () => {
   return (
