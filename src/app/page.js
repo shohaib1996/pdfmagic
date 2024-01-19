@@ -1,7 +1,4 @@
-
-import Image from 'next/image'
 import Banner from './banner/Banner';
-
 
 const Home = () => {
   return (
