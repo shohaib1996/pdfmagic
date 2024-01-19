@@ -1,6 +1,6 @@
 "use client"
 import Container from "@/app/utils/Container";
-import logo from "@/assets/R (4).png";
+import logo from "@/assets/pdfLogo.png";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -11,7 +11,8 @@ const Footer = () => {
                 <footer className="footer p-10  text-base-content ">
                     <aside>
                         <Link href={'/'} className="btn btn-ghost text-xl">
-                            <Image height={50} width={50} src={logo} alt='logo'></Image>
+                            <Image height={75} width={75} src={logo} alt='logo'></Image>
+                            <p className="font-bold">PDFmagic</p>
                         </Link>
                         <p>The Kingfishers.<br />Every tool you need to work with PDFs in one place</p>
                     </aside>

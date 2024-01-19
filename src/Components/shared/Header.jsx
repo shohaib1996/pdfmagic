@@ -1,7 +1,7 @@
 "use client"
 import Image from 'next/image';
 import Link from 'next/link';
-import logo from "@/assets/R (4).png";
+import logo from "@/assets/pdfLogo.png";
 import Container from '@/app/utils/Container';
 const Header = () => {
     const navLink = [
@@ -17,10 +17,10 @@ const Header = () => {
             name: "Contact",
             pathName: "/contact"
         },
-        {
-            name: "Dashboard",
-            pathName: "/dashboard"
-        },
+        // {
+        //     name: "Dashboard",
+        //     pathName: "/dashboard"
+        // },
     ]
     return (
         <div className=" bg-base-100 shadow-xl z-50 sticky top-0 h-15">
@@ -46,11 +46,12 @@ const Header = () => {
                             </ul>
                         </div>
                         <Link href={'/'} className="btn btn-ghost text-xl">
-                            <Image height={50} width={50} src={logo} alt='logo'></Image>
+                            <Image height={75} width={75} src={logo} alt='logo'></Image>
+                            <p className='font-bold'>PDFmagic</p>
                         </Link>
                     </div>
                     <div className="navbar-center hidden lg:flex">
-                        <ul className="menu menu-horizontal px-1">
+                        <ul className="menu menu-horizontal px-1 space-x-4">
                             {
                                 navLink.map((nav) => (
                                     <Link key={nav.name} href={nav.pathName}>
@@ -64,7 +65,7 @@ const Header = () => {
                         </ul>
                     </div>
                     <div className="navbar-end">
-                        <a className="btn">Button</a>
+                        <a className="btn bg-[#FF5800] text-white font-bold">Login</a>
                     </div>
                 </div>
 
