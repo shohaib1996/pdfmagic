@@ -1,16 +1,18 @@
 "use client"
+
 import Container from '@/app/utils/Container';
 import dynamic from 'next/dynamic';
 
-
-const ReactPlayer = dynamic(() => import('react-player'), { ssr: false })
+const ReactPlayer = dynamic(() => import('react-player'), { ssr: false });
 
 const Benefits = () => {
+  const playerWidth = typeof window !== 'undefined' && window.innerWidth >= 768 ? 500 : 300;
+
   return (
     <Container>
       <div className='grid grid-cols-1 md:grid-cols-2 max-w-screen-2xl mx-auto my-12'>
         <div className='col-span-1 ml-2'>
-          <ReactPlayer width={window.innerWidth >= 768 ? 500 : 300} url='https://www.youtube.com/watch?v=En1TDojx8KY' />
+          <ReactPlayer width={playerWidth} url='https://www.youtube.com/watch?v=En1TDojx8KY' />
         </div>
         <div className='text-center col-span-1'>
           <p className='md:text-5xl text-3xl text-black font-bold'>Benefits</p>
@@ -23,7 +25,6 @@ const Benefits = () => {
             <li>6. Stay Updated with Innovative Features Regularly</li>
           </ol>
         </div>
-
       </div>
     </Container>
   );
