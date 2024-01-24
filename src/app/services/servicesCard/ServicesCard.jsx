@@ -4,7 +4,7 @@ import React from 'react';
 const ServicesCard = ({ name, feature, benefit, image }) => {
     return (
         <div className="card bg-base-100 border-2 hover:shadow-xl ">
-            <div className='flex justify-center items-center mt-2 w-full'>
+            <div className='flex justify-center items-center  w-full'>
                 <Image
                     src={image}
                     width={300}
