@@ -23,7 +23,7 @@ const Services = () => {
                     Every tool you need to use PDFs, at your fingertips. All are 100% FREE and easy to use! Merge, split, compress, convert, rotate, unlock and watermark PDFs with just a few clicks.
                 </h1>
 
-                <div className="grid grid-cols-4 gap-2 my-4">
+                <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-2 my-4">
                     {
                         services.map(service => (
                             <ServicesCard
