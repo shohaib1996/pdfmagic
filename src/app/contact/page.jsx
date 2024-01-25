@@ -45,35 +45,68 @@ const ContactUs = () => {
                     </div>
                     <div className="my-4 mx-auto max-w-xl bg-white font-[sans-serif] flex-1 p-5 lg:p-0">
                         <form className="mt-0 lg:mt-8 space-y-4" id="contactForm" ref={form} onSubmit={sendEmail}>
-                            <input
+                            {/* <input
                                 type="text"
                                 placeholder="Name"
                                 className="w-full rounded-md py-3 px-4 bg-gray-100 text-sm outline-[#FC440C]"
                                 name="user_name"
                                 required
-                            />
-                            <input
+                            /> */}
+                            <div className="form-control">
+                                <label className="label">
+                                    <span className="label-text dark:text-white">Name</span>
+                                </label>
+                                <input
+                                    type="name"
+                                    placeholder="Name"
+                                    name="user_name"
+                                    className="input  input-bordered rounded-none"
+                                    required />
+                            </div>
+                            {/* <input
                                 type="email"
                                 placeholder="Email"
                                 className="w-full rounded-md py-3 px-4 bg-gray-100 text-sm outline-[#FC440C]"
                                 name="user_email"
                                 required
-                            />
+                            /> */}
+                            <div className="form-control">
+                                <label className="label">
+                                    <span className="label-text dark:text-white">Email</span>
+                                </label>
+                                <input
+                                    type="email"
+                                    placeholder="Email"
+                                    name="user_email"
+                                    className="input  input-bordered rounded-none"
+                                    required />
+                            </div>
+                            <div className="form-control">
 
-                            <textarea
-                                placeholder="Message"
-                                rows={6}
-                                className="w-full rounded-md px-4 bg-gray-100 text-sm pt-3 outline-[#FC440C]"
-                                defaultValue={""}
-                                name="message"
-                                required
-                            />
+                                <label className="label">
+                                    <span className="label-text dark:text-white">Comment</span>
+                                </label>
+                                <textarea
+                                    placeholder="Message"
+                                    rows={6}
+                                    // className="w-full rounded-md px-4 bg-gray-100 text-sm pt-3 outline-[#FC440C]"
+                                    className="input  input-bordered rounded-none w-full h-24"
+                                    defaultValue={""}
+                                    name="message"
+                                    required
+                                />
+                            </div>
                             {loading ? <button
                                 type="button"
-                                className="text-white bg-[#FC440C] font-semibold rounded-md text-xl px-4 py-3 w-full"
+                                className="btn text-white bg-slate-800 font-semibold rounded-none text-xl  w-full"
                             >
                                 <ImSpinner9 className="animate-spin w-full mx-auto"></ImSpinner9>
-                            </button> : <input type="submit" value="Send" className="text-white bg-[#FC440C] hover:bg-[#fc0c0c] font-semibold rounded-md text-sm px-4 py-3 w-full" />}
+                            </button> :
+                                <input
+                                    type="submit"
+                                    value="Send"
+                                    className="btn  text-white  bg-slate-800  border-none rounded-none w-full"
+                                />}
                         </form>
                     </div>
 

@@ -8,7 +8,7 @@ import { TypeAnimation } from "react-type-animation";
 
 const Banner = () => {
     return (
-        <div className="bg-[#e9ff70]">
+        <div className="">
             <Container>
                 <div className="flex items-center justify-center gap-8 flex-col-reverse lg:flex-row">
                     <div className="flex-1 space-y-5 p-5 lg:p-0">
@@ -30,7 +30,7 @@ const Banner = () => {
                                 ]}
                                 wrapper="span"
                                 speed={50}
-                                style={{  display: 'inline-block', color: "#FF5800" }}
+                                style={{ display: 'inline-block', color: "#FF5800" }}
                                 repeat={Infinity}
                             />
                         </h1>

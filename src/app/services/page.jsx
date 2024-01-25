@@ -15,9 +15,9 @@ const Services = () => {
             .then((data) => setServices(data))
             .catch((error) => console.error('Error fetching data:', error));
     }, []);
-    console.log(services)
+    // console.log(services)
     const location = usePathname()
-    console.log(location)
+    // console.log(location)
     return (
         <div >
             <Container>
@@ -42,7 +42,9 @@ const Services = () => {
                                                     image={service.image}
                                                     name={service.name}
                                                     feature={service.feature}
-                                                    benefit={service.benefit}>
+                                                    benefit={service.benefit}
+                                                    location={location}
+                                                >
                                                 </ServicesCard>
                                             </Link>
                                         ))
@@ -50,7 +52,7 @@ const Services = () => {
                                 </div>
                                 <div className="flex justify-center items-center w-full mb-4">
                                     <Link href={'/services'} >
-                                        <button className="btn bg-red-400 text-white">More</button>
+                                        <button className="btn  text-white  bg-slate-800 dark:text-white border-none rounded-none">See All</button>
                                     </Link>
                                 </div>
 

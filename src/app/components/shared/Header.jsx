@@ -65,7 +65,7 @@ const Header = () => {
                         </ul>
                     </div>
                     <div className="navbar-end">
-                        <Link href={"/login"} className="btn bg-[#FF5800] text-white font-bold">Login</Link>
+                        <Link href={"/login"} className="btn  text-white  bg-slate-800 dark:text-white border-none rounded-full">Login</Link>
                     </div>
                 </div>
 
