@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import ServicesCard from "./servicesCard/ServicesCard";
 import Container from "../utils/Container";
+import Link from "next/link";
 
 const Services = () => {
     const [services, setServices] = useState([]);
@@ -26,13 +27,18 @@ const Services = () => {
                 <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-2 my-4">
                     {
                         services.map(service => (
-                            <ServicesCard
+                            <Link
                                 key={service.id}
-                                image={service.image}
-                                name={service.name}
-                                feature={service.feature}
-                                benefit={service.benefit}>
-                            </ServicesCard>)
+                                href={`services/${service.id}`}
+                            >
+                                <ServicesCard
+                                    image={service.image}
+                                    name={service.name}
+                                    feature={service.feature}
+                                    benefit={service.benefit}>
+                                </ServicesCard>
+                            </Link>
+                        )
                         )
                     }
                 </div>
