@@ -36,7 +36,7 @@ const Banner = () => {
                         </h1>
 
                         <p>Introducing PDF Magic – your go-to for quick document transformations. Convert PDFs to Word, Word to PDF, JPG to PDF, or effortlessly extract images. Our user-friendly interface and powerful algorithms ensure a seamless experience. Say farewell to compatibility issues and embrace the simplicity of document conversion with PDF Magic!</p>
-                        <button className="text-2xl font-bold p-3 border-2 border-[#f42b03] rounded-lg hover:bg-[#FF5800] hover:text-white ">Explore More!</button>
+                        <button className="text-2xl font-bold p-3 border-2 border-black rounded-lg hover:bg-[#130c08] hover:text-white ">Explore More!</button>
                     </div>
 
                     <div className="flex-1">
