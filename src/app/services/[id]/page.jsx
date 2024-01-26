@@ -16,17 +16,25 @@ const CardDetails = () => {
     console.log(services)
     const id = useParams()
 
-    const handelDrop = () => {
+    const handelDrop = (e) => {
 
+        // let getData = e.dataTransfer
+
+        console.log('drop')
+    }
+    const handelDragOver = (e) => {
+        e.preventDefault();
     }
     return (
         <div>
             <Container>
-                <div onDrop={handelDrop}>
+                <div >
                     <h1 className='text-center font-bold text-xl my-5'>
                         Pdf to ppt Converter
                     </h1>
                     <div
+                        onDrop={(e) => handelDrop(e)}
+                        onDragOver={(e) => handelDragOver(e)}
                         className='w-[70%] mx-auto bg-amber-500 h-[200px]
                          md:h-[250px] grid justify-center items-center p-1 border-dashed border-2 rounded-md  border-black  '  >
                         <div className='flex justify-center items-center'>
