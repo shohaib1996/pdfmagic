@@ -12,14 +12,14 @@ const login = () => {
 
     }
     return (
-        <div className="hero  min-h-screen dark:bg-slate-800  ">
+        <div className="hero  min-h-screen  ">
             <div className="max-w-7xl mx-auto  md:flex justify-center">
                 <div className="hidden md:block">
                     <Image
                         src="https://i.ibb.co/8jFYK8c/Lovepik-com-450092341-Flat-illustration-of-secure-login-in-editable-design-removebg-preview.png"
                         alt="img"
                         height={500}
-                        width={400}
+                        width={600}
                     />
 
                 </div>
