@@ -31,7 +31,7 @@ const Services = () => {
                         location === "/"
                             ? <div >
                                 <h1 className="text-center font-bold text-3xl my-6">Our Services</h1>
-                                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-2 my-4">
+                                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-2 my-4  p-3 ">
                                     {
                                         services.slice(0, 6).map(service => (
                                             <Link
@@ -58,7 +58,7 @@ const Services = () => {
 
                             </div>
                             :
-                            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-2 my-4">
+                            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-2 my-4  p-3 ">
                                 {
                                     services.map(service => (
                                         <Link
