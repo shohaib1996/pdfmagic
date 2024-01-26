@@ -3,17 +3,12 @@
 import { useEffect, useState } from "react";
 import ServicesCard from "./servicesCard/ServicesCard";
 import Container from "../utils/Container";
+import useServices from "@/hooks/useServices";
 
 const Services = () => {
-    const [services, setServices] = useState([]);
-
-    useEffect(() => {
-        fetch("/services.json") // Fetch from the public directory directly
-            .then((res) => res.json())
-            .then((data) => setServices(data))
-            .catch((error) => console.error('Error fetching data:', error));
-    }, []);
-    console.log(services)
+    const [services] = useServices()
+    console.log(services);
+  
 
     return (
         <div >
@@ -27,7 +22,7 @@ const Services = () => {
                     {
                         services.map(service => (
                             <ServicesCard
-                                key={service.id}
+                                key={service._id}
                                 image={service.image}
                                 name={service.name}
                                 feature={service.feature}
