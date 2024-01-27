@@ -3,18 +3,23 @@
 import { useEffect, useState } from "react";
 import ServicesCard from "./servicesCard/ServicesCard";
 import Container from "../utils/Container";
+import useServices from "@/hooks/useServices";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
 const Services = () => {
-    const [services, setServices] = useState([]);
+    const [services] = useServices()
+    console.log(services);
 
-    useEffect(() => {
-        fetch("/services.json") // Fetch from the public directory directly
-            .then((res) => res.json())
-            .then((data) => setServices(data))
-            .catch((error) => console.error('Error fetching data:', error));
-    }, []);
+
+    // const [services, setServices] = useState([]);
+
+    // useEffect(() => {
+    //     fetch("/services.json") // Fetch from the public directory directly
+    //         .then((res) => res.json())
+    //         .then((data) => setServices(data))
+    //         .catch((error) => console.error('Error fetching data:', error));
+    // }, []);
     // console.log(services)
     const location = usePathname()
     // console.log(location)
