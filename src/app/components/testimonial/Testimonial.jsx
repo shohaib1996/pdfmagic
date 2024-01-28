@@ -15,21 +15,21 @@ const Testimonial = () => {
     const [testimonials, setTestimonials] = useState([]);
 
     useEffect(() => {
-      fetch("/comment.json") // Fetch from the public directory directly
-        .then((res) => res.json())
-        .then((data) => setTestimonials(data))
-        .catch((error) => console.error('Error fetching data:', error));
+        fetch("/comment.json") // Fetch from the public directory directly
+            .then((res) => res.json())
+            .then((data) => setTestimonials(data))
+            .catch((error) => console.error('Error fetching data:', error));
     }, []);
-    
+
     console.log(testimonials);
-    
+
 
     return (
-          <div className="max-w-6xl mx-auto">
+        <div className="max-w-7xl mx-auto">
             <h1 className="lg:text-5xl text-3xl  text-center text-[#FF5800] font-bold py-6">Testimonial</h1>
             <div className="w-3/5 mx-auto space-y-5">
                 <p className="lg:text-5xl text-3xl font-bold text-center">What Customer Says</p>
-                
+
             </div>
             <div className="mb-12 flex flex-col items-center justify-center">
                 <div className="grid gap-8 grid-cols-1 lg:grid-cols-2 pb-12 mt-12">
@@ -37,18 +37,18 @@ const Testimonial = () => {
                         <Swiper
                             modules={[Navigation, A11y, Autoplay]}
                             spaceBetween={40}
-                            autoplay={{delay: 1000}}
+                            autoplay={{ delay: 1000 }}
                             breakpoints={{
                                 640: {
-                                    slidesPerView: 1, 
-                                    spaceBetween: 20, 
+                                    slidesPerView: 1,
+                                    spaceBetween: 20,
                                 },
                                 768: {
-                                    slidesPerView: 2, 
+                                    slidesPerView: 2,
                                     spaceBetween: 30,
                                 },
                                 1024: {
-                                    slidesPerView: 2, 
+                                    slidesPerView: 2,
                                     spaceBetween: 50,
                                 },
                             }}
