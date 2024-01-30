@@ -17,6 +17,7 @@ const Header = () => {
             name: "Contact",
             pathName: "/contact"
         },
+        
         // {
         //     name: "Dashboard",
         //     pathName: "/dashboard"
@@ -65,8 +66,8 @@ const Header = () => {
                         </ul>
                     </div>
                     <div className="navbar-end">
-                        <a className="btn bg-[#FF5800] text-white font-bold">Login</a>
-                    </div>
+                        <a  className="btn bg-[#FF5800] text-white font-bold">Login</a>
+                 </div>
                 </div>
 
             </Container>
